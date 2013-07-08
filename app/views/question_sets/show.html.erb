@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Set:</b>
+  <%= @question_set.set_id %>
+</p>
+
+<p>
+  <b>Api:</b>
+  <%= @question_set.api_id %>
+</p>
+
+<p>
+  <b>Private:</b>
+  <%= @question_set.private %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_set_path(@question_set) %> |
+<%= link_to 'Back', question_sets_path %>

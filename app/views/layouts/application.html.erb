@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <%= render '/refinery/header' -%>
+      </div>
+      <div class="sitebar navbar navbar-fixed-top">
+        <%= site_bar -%>
+        <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+      </div>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <%= yield %>
+        </div>
+      </div>
+      <footer class="row-fluid">
+        <%= render '/refinery/footer' -%>
+      </footer> 
+    <%= render '/refinery/javascripts' %>
+  </body>
+</html>
