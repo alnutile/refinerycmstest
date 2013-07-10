@@ -15,4 +15,6 @@
 //= require angular
 //= require angular-resource
 //= require twitter/bootstrap
+//= require bootstrap-colorpicker
+//= require settings
 //= require_tree .
