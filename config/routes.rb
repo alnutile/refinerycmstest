@@ -1,4 +1,7 @@
 Rickrockstar::Application.routes.draw do
+  resources :settings
+
+
   resources :question_sets
   match 'dashboard' => 'dashboard#index'
 

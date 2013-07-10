@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Color top:</b>
+  <%= @setting.color_top %>
+</p>
+
+<p>
+  <b>Color footer:</b>
+  <%= @setting.color_footer %>
+</p>
+
+<p>
+  <b>Color background:</b>
+  <%= @setting.color_background %>
+</p>
+
+<p>
+  <b>Footer:</b>
+  <%= @setting.footer %>
+</p>
+
+<p>
+  <b>Logo:</b>
+  <%= @setting.logo %>
+</p>
+
+
+<%= link_to 'Edit', edit_setting_path(@setting) %> |
+<%= link_to 'Back', settings_path %>
