@@ -1,8 +1,8 @@
 (function() {
-	$('#setting_color_top').colorpicker().on('changeColor', function(ev){
-  		var color = ev.color.toHex();
-  		$('#setting_color_top').val(color);
-  		$('i.top').css('background-color', color);
+	$('#top, #background, #footer').colorpicker().on('changeColor', function(ev){
+  			var color = ev.color.toHex();
+  			console.log(color)
+  			$('.'+$(this).attr('id')).val(color);
 	});
 
 }).call(this);

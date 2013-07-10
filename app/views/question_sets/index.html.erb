@@ -1,60 +1,62 @@
-<div ng-controller="QandACtrl">
-  <h1>Listing question_sets</h1>
-  <p>Below is a list of questions from the API. Please choose the ones you would like to use to make your set</p>
+<div ng-app="FIS">
+    <div ng-controller="QandACtrl">
+    <h1>Listing question_sets</h1>
+    <p>Below is a list of questions from the API. Please choose the ones you would like to use to make your set</p>
 
-  <h2>Choose your questions from the API</h2>
-  <!-- click on the items in the list to push into the chosen array -->
+    <h2>Choose your questions from the API</h2>
+    <!-- click on the items in the list to push into the chosen array -->
 
-  <ul>
-    <li ng-repeat="question in questionsAPI">
-      {{question.Short}}
-    </li>
-  </ul>
+    <ul>
+      <li ng-repeat="question in questionsAPI">
+        {{question.Short}}
+      </li>
+    </ul>
 
-  <!-- show items from chosen array -->
-  {{questionsAPI}}
+    <!-- show items from chosen array -->
+    {{questionsAPI}}
 
-  <h1>Your Question Set</h2>
-  <div ng-controller="QandACtrl">
-    <form>
-      <input type="text" ng-model="set.name" placeholder="Set Name..."></br>
-      <input type="text" name="id" ng-model="set.id" size="4" value="" disabled/>
+    <h1>Your Question Set</h2>
+    <div ng-controller="QandACtrl">
+      <form>
+        <input type="text" ng-model="set.name" placeholder="Set Name..."></br>
+        <input type="text" name="id" ng-model="set.id" size="4" value="" disabled/>
+        
+        <input type="text" ng-repeat="set_question set_questions" value="" disabled/>
+
+
+        <br>
+        <button>Save Set</button>
+      </form>
+
       
-      <input type="text" ng-repeat="set_question set_questions" value="" disabled/>
+    </div>
 
 
-      <br>
-      <button>Save Set</button>
-    </form>
 
-    
+    <!-- original code -->
+    <table>
+      <tr>
+        <th>Set</th>
+        <th>Api</th>
+        <th>Private</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @question_sets.each do |question_set| %>
+      <tr>
+        <td><%= question_set.set_id %></td>
+        <td><%= question_set.api_id %></td>
+        <td><%= question_set.private %></td>
+        <td><%= link_to 'Show', question_set %></td>
+        <td><%= link_to 'Edit', edit_question_set_path(question_set) %></td>
+        <td><%= link_to 'Destroy', question_set, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
+
+    <br />
   </div>
-
-
-
-  <!-- original code -->
-  <table>
-    <tr>
-      <th>Set</th>
-      <th>Api</th>
-      <th>Private</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-
-  <% @question_sets.each do |question_set| %>
-    <tr>
-      <td><%= question_set.set_id %></td>
-      <td><%= question_set.api_id %></td>
-      <td><%= question_set.private %></td>
-      <td><%= link_to 'Show', question_set %></td>
-      <td><%= link_to 'Edit', edit_question_set_path(question_set) %></td>
-      <td><%= link_to 'Destroy', question_set, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-  </table>
-
-  <br />
+  <%= link_to 'New Question set', new_question_set_path %>
 </div>
-<%= link_to 'New Question set', new_question_set_path %>

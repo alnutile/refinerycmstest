@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :color_top %><br />    
-    <%= raw color_field(f, :color_top) %>
+    <%= raw color_field(f, :color_top, @setting.color_top, 'top') %>
   </div>
   <div class="field">
     <%= f.label :color_footer %><br />
-    <%= f.text_field :color_footer %>
+    <%= raw color_field(f, :color_footer, @setting.color_footer, 'footer') %>
   </div>
   <div class="field">
     <%= f.label :color_background %><br />
-    <%= f.text_field :color_background %>
+    <%= raw color_field(f, :color_background, @setting.color_background, 'background') %>
   </div>
   <div class="field">
     <%= f.label :footer %><br />
