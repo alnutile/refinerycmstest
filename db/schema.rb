@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130710175704) do
+ActiveRecord::Schema.define(:version => 20130711160639) do
 
   create_table "question_sets", :force => true do |t|
     t.integer  "set_id"
@@ -175,6 +175,7 @@ ActiveRecord::Schema.define(:version => 20130710175704) do
     t.string   "logo"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "sitename"
   end
 
 end

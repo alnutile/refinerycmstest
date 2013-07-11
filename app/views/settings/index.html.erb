@@ -7,19 +7,10 @@
         <% if Setting.count() == 0 %>
             <%= link_to 'Customize Settings', new_setting_path, class: "btn" %>
         <% else %>
+        <%= render :partial => 'fields', :locals => { :setting => @settings } %>
 
-        Color Top: <%= setting.color_top %> </br>
-        Color Footer: <%= setting.color_footer %> </br>
-        Color Background: <%= setting.color_background %> </br>
-        Logo: <br>
-        <%= setting.color_logo %> </br>
-        
-        Footer:
-        <p>
-            <%= setting.color_footer %>
-        </p>
 
-        <%= link_to 'Edit Settings', edit_setting_path(setting), class: "btn" %>
+        <%= link_to 'Edit Settings', edit_setting_path(@settings), class: "btn" %>
 
         <% end %>
     </div>

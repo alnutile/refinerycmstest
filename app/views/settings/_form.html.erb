@@ -11,7 +11,10 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :sitename %><br />    
+    <%= f.text_field :sitename %>
+  </div>
   <div class="field">
     <%= f.label :color_top %><br />    
     <%= raw color_field(f, :color_top, @setting.color_top, 'top') %>
