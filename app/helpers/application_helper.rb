@@ -9,7 +9,22 @@ module ApplicationHelper
   		settings.footer = 'Footer Message Here...' unless settings.footer.present?
   		return settings
   	end
-		
+	
+  def page_layout(page) 
+      if page.content_for(:side_body).present?
+      return "<div class='span8'>
+              #{raw page.content_for(:body)}
+            </div>
+            <div class='span4'>
+              #{raw page.content_for(:side_body)}
+            </div>"
+      else
+      return "<div class='span12'>
+              #{raw page.content_for(:body)}
+            </div>"
+      end
+  end	
+
 	def admin_or_client_adviser?
 		if current_refinery_user.id == 1 || current_refinery_user.id == 2
 			return true

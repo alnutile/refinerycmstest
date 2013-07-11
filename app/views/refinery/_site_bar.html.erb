@@ -10,10 +10,7 @@
       </div>
 
       <div id='site_bar_branding'>
-        <span id='site_bar_company_name'>
-          <%= Refinery::Core.site_name %>
-        </span>
-
+        <%= link_to 'Home', '/' %> &nbsp; &nbsp;| 
         <%= link_to t('.log_out', site_bar_translate_locale_args),
                     refinery.destroy_refinery_user_session_path, :id => 'logout' %>
       </div>

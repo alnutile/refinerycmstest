@@ -1,19 +1,24 @@
+/*
+ * This is a manifest file that'll be compiled into refinery.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ *= require_self
+ *= require refinery/layout
+ *= require refinery/site_bar
+ *= require refinery/ui
+ *= require refinery/submenu
+ *= require refinery/tooltips
+ *= require wymeditor/skins/refinery/skin
+*/
+@import 'bootstrap';
+
 @mixin rounded($radius) {
   border-radius: $radius;
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
-}
-
-body { 
-  padding-top: 85px; 
-}
-
-body.index, body.edit {
-  padding-top: 0px;
-}
-
-.sitebar.navbar.navbar-fixed-top {
-  top: 40px;
 }
 
 #site_bar_content {
