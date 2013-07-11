@@ -10,7 +10,7 @@ module SettingsHelper
 
 		return "    
 			<div id=\"#{target}\" class=\"input-append color\" data-color=\"#{color}\" data-color-format=\"hex\">
-      			#{ f.text_field field, class: target }
+      			#{ f.text_field field, :readonly => true, class: target }
       			<span class=\"add-on\"><i class=\"#{target}\" style=\"background-color: #{color}\"></i></span>
     		</div>"
 	end
