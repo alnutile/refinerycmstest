@@ -1,3 +1,4 @@
+<div class="span5">
 <%= form_for(@setting) do |f| %>
   <% if @setting.errors.any? %>
     <div id="error_explanation">
@@ -25,7 +26,7 @@
   </div>
   <div class="field">
     <%= f.label :footer %><br />
-    <%= f.text_area :footer %>
+    <%= f.text_area :footer, cols: 40 %>
   </div>
   <div class="field">
     <%= f.label :logo %><br />
@@ -35,3 +36,15 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
+
+<div class="span5">
+  <p>Set your branding here. Below is some lorem ipsum text to get a sense of the end result</p>
+  <div class="span10">
+    Bacon ipsum dolor sit amet doner tri-tip hamburger corned beef. Tail kielbasa pork chop cow ham hock biltong, tri-tip brisket pig short loin fatback t-bone filet mignon tenderloin pork loin. Ham hock rump meatloaf, bacon short loin tongue strip steak beef cow filet mignon ground round frankfurter. Sausage strip steak corned beef, tenderloin sirloin swine ground round t-bone frankfurter pancetta kielbasa pork drumstick.
+
+    Pork chicken ball tip ham jowl venison shoulder boudin turkey sirloin corned beef tri-tip. Ham short ribs tail ground round. Frankfurter pork chop shoulder shank ham hock shankle fatback capicola bacon bresaola pastrami ball tip andouille beef ribs. Ham hock corned beef swine, frankfurter hamburger shank pork loin doner fatback rump jerky beef prosciutto meatball chuck. Turkey swine biltong boudin brisket pig ham hock chuck corned beef meatloaf.
+
+    Drumstick swine doner rump meatball. Beef ball tip pork loin sirloin doner, tri-tip pancetta strip steak brisket venison chicken shankle rump ground round. Frankfurter pork loin tail kielbasa doner t-bone sausage ground round meatloaf venison tongue bresaola. Meatball venison pastrami sirloin. Pastrami turkey tenderloin pig pork belly. Salami ball tip leberkas pork loin shankle pig. Bacon chuck tail t-bone beef tenderloin venison pastrami drumstick capicola frankfurter jowl tri-tip pig ribeye.
+  </div>
+</div>

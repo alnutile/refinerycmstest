@@ -9,13 +9,9 @@
 
   <div class="navbar-inner">
     <div class="container-fluid">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+
       <%= link_to Refinery::Core.site_name, refinery.root_path, :class => 'brand' %>
-      <div class="nav-collapse collapse">
+
         <ul class="nav">
     <%= render :partial => '/refinery/menu_branch', :collection => roots,
                :locals => {
@@ -25,7 +21,7 @@
                  :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                } -%>
         </ul>
-      </div><!--/.nav-collapse -->
+
     </div>
   </div>
 <% end -%>
