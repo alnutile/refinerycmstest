@@ -1,7 +1,8 @@
 module ApplicationHelper
 
   	def get_settings
-  		settings = Setting.first
+		settings = Setting.new
+		settings = Setting.first unless Setting.first.nil?
   		settings.sitename = 'Default' unless settings.sitename.present? 
   		settings.color_top = '#1b1b1b' unless settings.color_top.present? 
   		settings.color_background = '#fff' unless settings.color_background.present? 
