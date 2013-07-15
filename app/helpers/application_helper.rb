@@ -1,13 +1,15 @@
 module ApplicationHelper
 
   	def get_settings
+    default_color = "#e7e4d8"
 		settings = Setting.new
 		settings = Setting.first unless Setting.first.nil?
   		settings.sitename = 'Default' unless settings.sitename.present? 
-  		settings.color_top = '#1b1b1b' unless settings.color_top.present? 
-  		settings.color_background = '#fff' unless settings.color_background.present? 
-  		settings.color_footer = '#fff' unless settings.color_footer.present?
-  		settings.footer = 'Footer Message Here...' unless settings.footer.present?
+  		settings.color_top = default_color unless settings.color_top.present? 
+  		settings.color_background = default_color unless settings.color_background.present? 
+  		settings.color_footer = default_color unless settings.color_footer.present?
+      settings.footer = 'Footer Message Here...' unless settings.footer.present?
+  		settings.logo = 'image/here' unless settings.logo.url.present?
   		return settings
   	end
 	

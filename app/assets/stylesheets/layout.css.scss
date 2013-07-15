@@ -1,3 +1,56 @@
+$width: 1040px;
+
+.container-narrow {
+	max-width: $width;
+	margin: 0 auto;
+}
+
+.top-area-wrapper.row {
+	padding: 5px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
 footer {
 	min-height: 200px;
+}
+
+.content.row {
+	padding: 24px 10px;
+	background-color: white;
+	border: 10px solid #D9D3C5;
+}
+
+.content.row {
+	h1 {
+		margin-left: 18px
+
+	}
+}
+
+footer {
+	padding: 10px;
+}
+
+.navbar {
+	float: right;
+	position: absolute;
+	bottom: -17px;
+	right: 0px;
+	
+	.nav > .active > a,
+	.nav > a:hover,
+	.nav > li > a:hover {
+		border-bottom: 0px;
+	}
+}
+
+a.brand:hover {
+	background-color: transparent;
+	border-bottom: 0px;
+}
+
+hr {
+  width: 97%;
+  margin: 10px auto !important;	
 }
