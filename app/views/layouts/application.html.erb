@@ -3,21 +3,20 @@
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
   <body style="background-color: <%= get_settings.color_background %>;">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <%= render '/refinery/header' -%>
-      </div>
-      <div class="sitebar navbar navbar-fixed-top">
+    <div class="container-narrow">
+      <!--top menu row-->
+      <%= render '/refinery/header' -%>
+      <div class="sitebar navbar">
         <%= site_bar -%>
         <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
       </div>
-      <div class="container-fluid">
-        <div class="row-fluid">
-          <%= yield %>
-        </div>
+      <div class="row content">
+        <%= yield %>
       </div>
-      <footer class="row-fluid" style="background-color: <%= get_settings.color_footer %>;">
+      <footer class="row" style="background-color: <%= get_settings.color_footer %>;">
         <%= render '/refinery/footer' -%>
-      </footer> 
+      </footer>
+    </div>
     <%= render '/refinery/javascripts' %>
   </body>
 </html>

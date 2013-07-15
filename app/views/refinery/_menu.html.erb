@@ -1,6 +1,7 @@
 <%
 
   color_top = get_settings.color_top
+  image_top = get_settings.logo
 
   # Collect the root items.
   # ::Refinery::Menu is smart enough to remember all of the items in the original collection.
@@ -10,21 +11,21 @@
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
 
-  <div class="navbar-inner" style="background-color: <%= color_top %>; background-image: none; border-color: <%= color_top %>;">
-    <div class="container-fluid">
-
-      <%= link_to get_settings.sitename, refinery.root_path, :class => 'brand' %>
-
-        <ul class="nav">
-    <%= render :partial => '/refinery/menu_branch', :collection => roots,
-               :locals => {
-                 :hide_children => hide_children,
-                 :sibling_count => (roots.length - 1),
-                 :menu_levels => local_assigns[:menu_levels],
-                 :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
-               } -%>
-        </ul>
-
+  <div class="top-area-wrapper row" style="background-color: <%= color_top %>; background-image: none; border-color: <%= color_top %>;">
+      <%= link_to image_tag(image_top, :border=>0), refinery.root_path, :class => 'brand span5' %>
+      
+      <div class="navbar span6 pull-right">
+        <div class="navbar-inner">
+          <ul class="nav">
+            <%= render :partial => '/refinery/menu_branch', :collection => roots,
+                       :locals => {
+                         :hide_children => hide_children,
+                         :sibling_count => (roots.length - 1),
+                         :menu_levels => local_assigns[:menu_levels],
+                         :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
+                       } -%>
+          </ul>
+      </div>
     </div>
   </div>
 <% end -%>
