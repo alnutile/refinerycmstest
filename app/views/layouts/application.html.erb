@@ -3,13 +3,16 @@
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
   <body style="background-color: <%= get_settings.color_background %>;">
+    <!--keep sidebar out of html if not logged in-->
+    <% if current_refinery_user.present? %>
+    <div class="sitebar navbar">
+      <%= site_bar -%>
+      <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    </div>    
+    <% end %>
     <div class="container-narrow">
       <!--top menu row-->
       <%= render '/refinery/header' -%>
-      <div class="sitebar navbar">
-        <%= site_bar -%>
-        <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-      </div>
       <div class="row content">
         <%= yield %>
       </div>
