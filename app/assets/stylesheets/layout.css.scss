@@ -1,9 +1,20 @@
 $width: 1040px;
 
+$fontfamilyone: 'Myriad Pro', 'Myriad Roman', 'Myriad', 'Trebuchet Ms', 'Trebuchet', Helvetica, Arial, Helvetica, sans-serif;
+$fontsizeone: 21px;
+$fontcolorone: #5e5a4a;
+
+$fontsizetwo: 14px;
+$fontcolortwo: #333;
+
+$fontsizethree: 26px;
+$fontcolorthree: #111;
+
 .container-narrow {
 	max-width: $width;
 	margin: 0 auto;
 }
+
 
 .top-area-wrapper.row {
 	padding: 5px;
@@ -18,7 +29,26 @@ footer {
 .content.row {
 	padding: 24px 10px;
 	background-color: white;
-	border: 10px solid #D9D3C5;
+	border: 15px solid #D9D3C5;
+
+
+	h2 {
+		font-family: $fontfamilyone;
+		font-size: $fontsizeone;
+		color: $fontcolorone;
+	}	
+
+	h1 {
+		font-size: $fontsizethree;
+		color: $fontcolorthree;
+		font-weight: bold;
+	}
+
+	p {
+		font-size: $fontsizetwo;
+		color: $fontcolortwo;
+	}
+
 }
 
 .content.row {
