@@ -27,6 +27,16 @@ module ApplicationHelper
             </div>"
       end
   end	
+  
+  def logout_login
+    if current_refinery_user.present?
+     return link_to 'Log Out',
+                    refinery.destroy_refinery_user_session_path, :id => 'logout'
+    else 
+      return link_to 'Sign In',
+                    refinery.new_refinery_user_session_path, :id => 'login'
+    end
+  end
 
 	def admin_or_client_adviser?
 		if current_refinery_user.id == 1 || current_refinery_user.id == 2
