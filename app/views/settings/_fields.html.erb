@@ -19,10 +19,10 @@
 
 <p>
   <b>Footer:</b>
-  <%= setting.footer %>
+  <%= raw setting.footer %>
 </p>
 
 <p>
   <b>Logo:</b>
-  <img src="<%= setting.logo %>">
+  <img src="<%= setting.logo.url(:medium) %>">
 </p>

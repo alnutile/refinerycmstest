@@ -1,5 +1,5 @@
 <div class="span5">
-<%= form_for(@setting) do |f| %>
+<%= form_for @setting, :html => { :multipart => true } do |f| %>
   <% if @setting.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@setting.errors.count, "error") %> prohibited this setting from being saved:</h2>
@@ -34,6 +34,7 @@
   <div class="field">
     <%= f.label :logo %><br />
     <%= f.file_field :logo %>
+    <span class="help-block">Image size: 70px tall and about 400px wide is a good size.</span>
   </div>
   <div class="actions">
     <%= f.submit %>
