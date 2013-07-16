@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  def set_headers
+    response.headers['X-XSS-Protection'] = "0"
+  end
+  
 	private
 	  def logged_in
 	  	if refinery_user? == false
