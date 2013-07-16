@@ -39,6 +39,10 @@ GEM
     arel (3.0.2)
     awesome_nested_set (2.1.6)
       activerecord (>= 3.0.0)
+    aws-sdk (1.12.0)
+      json (~> 1.4)
+      nokogiri (< 1.6.0)
+      uuidtools (~> 2.1)
     babosa (0.3.11)
     bcrypt-ruby (3.0.1)
     bootstrap-colorpicker-rails (0.3.1)
@@ -208,6 +212,7 @@ GEM
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    uuidtools (2.1.4)
     warden (1.1.1)
       rack (>= 1.0)
     will_paginate (3.0.4)
@@ -217,6 +222,7 @@ PLATFORMS
 
 DEPENDENCIES
   angularjs-rails
+  aws-sdk
   bootstrap-colorpicker-rails
   coffee-rails (~> 3.2.1)
   fog
