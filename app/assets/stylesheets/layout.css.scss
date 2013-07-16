@@ -19,7 +19,6 @@ $fontcolorthree: #111;
 .top-area-wrapper.row {
 	padding: 5px;
 	position: relative;
-	margin-bottom: 10px;
 }
 
 
@@ -67,8 +66,9 @@ footer {
 	padding: 10px;
 }
 
-.navbar {
+.menu.navbar {
 	float: right;
+	margin-right: 5px;
 	position: absolute;
 	bottom: -17px;
 	right: 0px;
@@ -83,7 +83,6 @@ footer {
 .sitebar.navbar {
   position: relative;
   float: none;
-  bottom: -1px;
 }
 
 a.brand:hover {
