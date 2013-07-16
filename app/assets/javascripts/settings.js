@@ -8,9 +8,10 @@
   			}
 
   			if($(this).attr('id') == 'top') {
-  				$('.navbar-inverse .navbar-inner').css('background-color', color);
-  				$('.navbar-inverse .navbar-inner').css('background-image', 'none');
-  				$('.navbar-inverse .navbar-inner').css('border-color', color);
+          console.log(color);
+  				$('.top-area-wrapper').css('background-color', color);
+  				$('.top-area-wrapper').css('background-image', 'none');
+  				$('.top-area-wrapper').css('border-color', color);
   			}
 
   			if($(this).attr('id') == 'footer') {
